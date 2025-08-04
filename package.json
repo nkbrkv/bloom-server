@@ -19,7 +19,14 @@
         "start:db": "docker-compose up -d",
         "prisma:generate": "npx prisma generate",
         "prisma:migrate": "npx prisma migrate deploy",
-        "load-mock": "node scripts/loadMockData.js"
+        "load-mock": "node scripts/loadMockData.js",
+        "docker:build": "docker build -t bloom-store .",
+        "docker:build:prod": "docker build -f Dockerfile.prod -t bloom-store:prod .",
+        "docker:run": "docker run -p 3000:3000 --env-file .env bloom-store",
+        "docker:run:prod": "docker run -p 3000:3000 --env-file .env bloom-store:prod",
+        "docker:up:prod": "docker-compose -f docker-compose.prod.yml up -d",
+        "docker:down:prod": "docker-compose -f docker-compose.prod.yml down",
+        "docker:logs": "docker-compose -f docker-compose.prod.yml logs -f"
     },
     "author": "",
     "license": "ISC",
