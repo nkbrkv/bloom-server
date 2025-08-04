@@ -26,6 +26,6 @@
         "allowUnreachableCode": false,
         "exactOptionalPropertyTypes": true
     },
-    "include": ["src/**/*", "src/scripts/loadMockData.ts"],
+    "include": ["src/**/*"],
     "exclude": ["node_modules", "dist"]
 }
