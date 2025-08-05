@@ -1,21 +1,21 @@
-const { PrismaClient } = require('../generated/prisma');
+const {PrismaClient} = require('../generated/prisma');
 
 const prisma = new PrismaClient();
 
 const createUser = async (data) => {
-    return await prisma.user.create({ data });
+    return await prisma.user.create({data});
 };
 
 const createProduct = async (data) => {
-    return await prisma.product.create({ data });
+    return await prisma.product.create({data});
 };
 
 const createOrder = async (data) => {
-    return await prisma.order.create({ data });
+    return await prisma.order.create({data});
 };
 
 const createOrderItem = async (data) => {
-    return await prisma.orderItem.create({ data });
+    return await prisma.orderItem.create({data});
 };
 
 const getMockData = () => {
@@ -194,9 +194,9 @@ const getMockData = () => {
                 status: 'delivered',
                 totalAmount: 2650.0,
                 items: [
-                    { productIndex: 0, quantity: 5, price: 150.0 },
-                    { productIndex: 1, quantity: 1, price: 1800.0 },
-                    { productIndex: 15, quantity: 1, price: 50.0 },
+                    {productIndex: 0, quantity: 5, price: 150.0},
+                    {productIndex: 1, quantity: 1, price: 1800.0},
+                    {productIndex: 15, quantity: 1, price: 50.0},
                 ],
             },
             {
@@ -204,8 +204,8 @@ const getMockData = () => {
                 status: 'confirmed',
                 totalAmount: 1380.0,
                 items: [
-                    { productIndex: 2, quantity: 3, price: 120.0 },
-                    { productIndex: 10, quantity: 1, price: 1200.0 },
+                    {productIndex: 2, quantity: 3, price: 120.0},
+                    {productIndex: 10, quantity: 1, price: 1200.0},
                 ],
             },
             {
@@ -213,8 +213,8 @@ const getMockData = () => {
                 status: 'pending',
                 totalAmount: 2850.0,
                 items: [
-                    { productIndex: 3, quantity: 1, price: 2200.0 },
-                    { productIndex: 14, quantity: 1, price: 800.0 },
+                    {productIndex: 3, quantity: 1, price: 2200.0},
+                    {productIndex: 14, quantity: 1, price: 800.0},
                 ],
             },
             {
@@ -222,9 +222,9 @@ const getMockData = () => {
                 status: 'processing',
                 totalAmount: 890.0,
                 items: [
-                    { productIndex: 4, quantity: 2, price: 200.0 },
-                    { productIndex: 5, quantity: 3, price: 100.0 },
-                    { productIndex: 11, quantity: 1, price: 140.0 },
+                    {productIndex: 4, quantity: 2, price: 200.0},
+                    {productIndex: 5, quantity: 3, price: 100.0},
+                    {productIndex: 11, quantity: 1, price: 140.0},
                 ],
             },
             {
@@ -232,9 +232,9 @@ const getMockData = () => {
                 status: 'shipped',
                 totalAmount: 3520.0,
                 items: [
-                    { productIndex: 12, quantity: 1, price: 3200.0 },
-                    { productIndex: 7, quantity: 1, price: 180.0 },
-                    { productIndex: 9, quantity: 1, price: 160.0 },
+                    {productIndex: 12, quantity: 1, price: 3200.0},
+                    {productIndex: 7, quantity: 1, price: 180.0},
+                    {productIndex: 9, quantity: 1, price: 160.0},
                 ],
             },
             {
@@ -242,8 +242,8 @@ const getMockData = () => {
                 status: 'cancelled',
                 totalAmount: 4650.0,
                 items: [
-                    { productIndex: 19, quantity: 1, price: 4500.0 },
-                    { productIndex: 16, quantity: 1, price: 80.0 },
+                    {productIndex: 19, quantity: 1, price: 4500.0},
+                    {productIndex: 16, quantity: 1, price: 80.0},
                 ],
             },
             {
@@ -251,8 +251,8 @@ const getMockData = () => {
                 status: 'delivered',
                 totalAmount: 1150.0,
                 items: [
-                    { productIndex: 6, quantity: 1, price: 1500.0 },
-                    { productIndex: 16, quantity: 2, price: 80.0 },
+                    {productIndex: 6, quantity: 1, price: 1500.0},
+                    {productIndex: 16, quantity: 2, price: 80.0},
                 ],
             },
             {
@@ -260,8 +260,8 @@ const getMockData = () => {
                 status: 'confirmed',
                 totalAmount: 3150.0,
                 items: [
-                    { productIndex: 8, quantity: 1, price: 2500.0 },
-                    { productIndex: 18, quantity: 1, price: 650.0 },
+                    {productIndex: 8, quantity: 1, price: 2500.0},
+                    {productIndex: 18, quantity: 1, price: 650.0},
                 ],
             },
             {
@@ -269,8 +269,8 @@ const getMockData = () => {
                 status: 'processing',
                 totalAmount: 720.0,
                 items: [
-                    { productIndex: 13, quantity: 1, price: 450.0 },
-                    { productIndex: 17, quantity: 2, price: 120.0 },
+                    {productIndex: 13, quantity: 1, price: 450.0},
+                    {productIndex: 17, quantity: 2, price: 120.0},
                 ],
             },
             {
@@ -278,9 +278,9 @@ const getMockData = () => {
                 status: 'pending',
                 totalAmount: 860.0,
                 items: [
-                    { productIndex: 0, quantity: 2, price: 150.0 },
-                    { productIndex: 2, quantity: 1, price: 120.0 },
-                    { productIndex: 5, quantity: 4, price: 100.0 },
+                    {productIndex: 0, quantity: 2, price: 150.0},
+                    {productIndex: 2, quantity: 1, price: 120.0},
+                    {productIndex: 5, quantity: 4, price: 100.0},
                 ],
             },
             {
@@ -288,9 +288,9 @@ const getMockData = () => {
                 status: 'delivered',
                 totalAmount: 2080.0,
                 items: [
-                    { productIndex: 10, quantity: 1, price: 1200.0 },
-                    { productIndex: 11, quantity: 3, price: 140.0 },
-                    { productIndex: 7, quantity: 2, price: 180.0 },
+                    {productIndex: 10, quantity: 1, price: 1200.0},
+                    {productIndex: 11, quantity: 3, price: 140.0},
+                    {productIndex: 7, quantity: 2, price: 180.0},
                 ],
             },
             {
@@ -298,9 +298,9 @@ const getMockData = () => {
                 status: 'confirmed',
                 totalAmount: 1700.0,
                 items: [
-                    { productIndex: 4, quantity: 4, price: 200.0 },
-                    { productIndex: 9, quantity: 3, price: 160.0 },
-                    { productIndex: 15, quantity: 6, price: 50.0 },
+                    {productIndex: 4, quantity: 4, price: 200.0},
+                    {productIndex: 9, quantity: 3, price: 160.0},
+                    {productIndex: 15, quantity: 6, price: 50.0},
                 ],
             },
             {
@@ -308,8 +308,8 @@ const getMockData = () => {
                 status: 'shipped',
                 totalAmount: 3900.0,
                 items: [
-                    { productIndex: 3, quantity: 1, price: 2200.0 },
-                    { productIndex: 1, quantity: 1, price: 1800.0 },
+                    {productIndex: 3, quantity: 1, price: 2200.0},
+                    {productIndex: 1, quantity: 1, price: 1800.0},
                 ],
             },
         ],
@@ -346,7 +346,7 @@ async function loadMockData() {
 
         console.log('Creating orders...');
         for (const orderData of mockData.orders) {
-            const { items, ...orderInfo } = orderData;
+            const {items, ...orderInfo} = orderData;
             const userId = createdUsers[orderInfo.userIndex]?.id;
             if (!userId) {
                 console.error(`User with index ${orderInfo.userIndex} not found`);
